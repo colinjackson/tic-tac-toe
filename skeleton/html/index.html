@@ -11,30 +11,16 @@
     <script src="../../ttt-core-solution/ttt-core.js"></script>
     <script src="../js/ttt-view.js"></script>
 
-    <div id="tic-tac-toe">
-      <table class="game-grid">
-        <tbody>
-          <tr class="top">
-            <td class="left"><div class="square"></div></td>
-            <td class="center"><div class="square"></div></td>
-            <td class="right"><div class="square"></div></td>
-          </tr>
-          <tr class="mid">
-            <td class="left"><div class="square"></div></td>
-            <td class="center"><div class="square"></div></td>
-            <td class="right"><div class="square"></div></td>
-          </tr>
-          <tr class="bottom">
-            <td class="left"><div class="square"></div></td>
-            <td class="center"><div class="square"></div></td>
-            <td class="right"><div class="square"></div></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <div id="tic-tac-toe"></div>
 
     <script>
-      // Write your code here.
+      var $tictactoe = $("#tic-tac-toe");
+      var view = new TTT.View(null, $tictactoe);
+
+      $(".square").on("click", function () {
+        var $currentTarget = $(event.currentTarget);
+        $currentTarget.css("background-color", "transparent");
+      });
     </script>
   </body>
 </html>
