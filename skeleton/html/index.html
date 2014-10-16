@@ -8,19 +8,15 @@
   <body>
     <script src="../js/jquery-2.1.1.js"></script>
     <!-- Whackjobs at GithubPages don't understand symlinks... -->
-    <script src="../../ttt-core-solution/ttt-core.js"></script>
+    <script src="../js/ttt-core.js"></script>
     <script src="../js/ttt-view.js"></script>
 
     <div id="tic-tac-toe"></div>
 
     <script>
+      var game = new TTT.Game();
       var $tictactoe = $("#tic-tac-toe");
-      var view = new TTT.View(null, $tictactoe);
-
-      $(".square").on("click", function () {
-        var $currentTarget = $(event.currentTarget);
-        $currentTarget.css("background-color", "transparent");
-      });
+      var view = new TTT.View(game, $tictactoe);
     </script>
   </body>
 </html>

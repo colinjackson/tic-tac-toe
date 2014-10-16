@@ -48,9 +48,22 @@ body {
 .square {
   width: 100%;
   height: 100%;
+  text-align: center;
+
+  color: #ccddff;
+  font-weight: bold;
+}
+
+.square > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .square:hover {
   background: #bb2255;
-  opacity: 0.4;
+}
+
+.square-occupied:hover {
+  background: #444444;
 }
